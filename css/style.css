@@ -1,0 +1,156 @@
+body {
+    font-size: 16px;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+}
+
+h1, h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+}
+
+a {
+    color: #ff8f1e;
+    text-decoration: none !important;
+    border: none !important;
+    position: relative;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Bold.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Light.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container{
+    display: flex;
+    margin: 16px;
+}
+
+.profile__info {
+    padding-left: 0;
+    margin: 0;
+}
+
+.profile__info__item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.profile__info__item > .item {
+    padding: 4px;
+    margin: 0;
+}
+
+.profile__avatar {
+    border-radius: 100%;
+}
+
+.profile__about_me {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 32px;
+    /*margin: 128px;*/
+    border-radius: 12px;
+    box-shadow: 0 0 12px #d5d5d5;
+    background: white;
+}
+
+.profile__splitter{
+    height: 1px;
+    margin: 32px 0px 32px 0;
+    width: 100%;
+    background: #e7e6e6;
+    /*border-radius: 10%;*/
+}
+
+.labs__list_container {
+    border-radius: 12px;
+    box-shadow: 0 0 12px #d5d5d5;
+    background: white;
+    margin-left: 18px;
+    width: 100%;
+}
+
+.labs__list {
+    padding: 0 16px 0 16px;
+}
+
+.labs__list_container {
+    height: max-content;
+}
+
+.labs__list > .item {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+}
+
+.labs__list > .item p {
+    color: gray;
+    margin: 16px 0 0 0;
+}
+
+.labs__list > .item h2 {
+    margin: 0;
+    width: max-content;
+}
+
+.labs__list > .gray {
+    background: #f7f7f8;
+}
+
+.labs__list__label {
+    margin: 32px;
+}
+
+.labs__list > .item > .item__label {
+    display: flex;
+    align-items: center;
+}
+
+.labs__list > .item > .item__label > h2 {
+    margin: 0 10px;
+}
+
+a:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1.5px; /* Высота линии */
+    background-color: gray; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+a:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1.5px; /* Высота линии */
+    background-color: #ff8f1e; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
