@@ -88,14 +88,11 @@ li {
     background: white;
     margin-left: 18px;
     width: 100%;
+    height: max-content;
 }
 
 .labs__list {
     padding: 0 16px 0 16px;
-}
-
-.labs__list_container {
-    height: max-content;
 }
 
 .labs__list > .item {
@@ -127,9 +124,9 @@ li {
     align-items: center;
 }
 
-.labs__list > .item > .item__label > h2 {
-    margin: 0 10px;
-}
+/*.labs__list > .item > .item__label > h2 {*/
+/*    margin: 0 10px;*/
+/*}*/
 
 a:after {
 	content: "";
@@ -153,4 +150,58 @@ a:hover:after {
     height: 1.5px; /* Высота линии */
     background-color: #ff8f1e; /* Цвет подчеркивания при появлении линии*/
     transition: width 0.5s;  /* Время эффекта */
+}
+
+button {
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+}
+
+.interactive_plus {
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    pointer-events: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.interactive_plus_hided {
+    pointer-events: none;
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition:         transform .4s ease-in-out;
+}
+
+.labs__description {
+    display: none;
+}
+
+.appearance_description {
+    display: block;
+    animation-duration: 1s;
+    animation-name: appear;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.disappearance_description {
+    animation-duration: 1s;
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
