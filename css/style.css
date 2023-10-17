@@ -20,6 +20,11 @@ a {
     cursor: pointer;
 }
 
+img {
+    border-radius: 12px;
+    box-shadow: 0 0 12px #d5d5d5;
+}
+
 @font-face {
     font-family: "Inter";
     src: url("fonts/Inter-Bold.otf") format('truetype');
