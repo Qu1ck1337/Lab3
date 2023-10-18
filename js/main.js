@@ -1,9 +1,11 @@
-var buttons = document.querySelectorAll(".labs__list__button");
-var descriptions = document.querySelectorAll(".labs__description");
+// initializing NodeList of buttons and content for labs list
+var labsListButtons = document.querySelectorAll(".labs__list__button");
+var labsListContent = document.querySelectorAll(".hide");
 
+// event for button click
 function toggleDescriptionVisibility(e){
     console.log(e.target)
-    descriptions[e.target.id].classList.toggle("appearance_description");
+    labsListContent[e.target.id].classList.toggle("appearance_description");
     let plus = e.target.querySelector("svg").classList;
     if (plus.contains("interactive_plus")) {
         plus.remove("interactive_plus");
@@ -14,6 +16,7 @@ function toggleDescriptionVisibility(e){
     plus.add("interactive_plus");
 }
 
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', toggleDescriptionVisibility);
+// linking events to every button
+for (let i = 0; i < labsListButtons.length; i++) {
+    labsListButtons[i].addEventListener('click', toggleDescriptionVisibility);
 }
